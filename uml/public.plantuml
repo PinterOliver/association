@@ -1,0 +1,97 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class address {
+   city_id: bigint
+   street_type_id: bigint
+   user_id: bigint
+   house_number: varchar(255)
+   other_address_information: varchar(255)
+   postal_code: varchar(255)
+   street_name: varchar(255)
+   id: bigint
+}
+class birth {
+   birthday: date
+   city_id: bigint
+   user_id: bigint
+   id: bigint
+}
+class city {
+   country_id: bigint
+   name: varchar(255)
+   id: bigint
+}
+class country {
+   name: varchar(255)
+   id: bigint
+}
+class fee {
+   amount: bigint
+   created_at: timestamp(6)
+   user_id: bigint
+   type: varchar(255)
+   id: bigint
+}
+class membership {
+   end_date: date
+   start_date: date
+   type_id: bigint
+   user_id: bigint
+   id: bigint
+}
+class membership_type {
+   name: varchar(255)
+   id: bigint
+}
+class paid {
+   amount: bigint
+   paid_at: timestamp(6)
+   user_id: bigint
+   id: bigint
+}
+class person_name {
+   user_id: bigint
+   first_name: varchar(255)
+   last_name: varchar(255)
+   middle_name: varchar(255)
+   prefix: varchar(255)
+   suffix: varchar(255)
+   id: bigint
+}
+class role {
+   name: varchar(255)
+   id: bigint
+}
+class street_type {
+   name: varchar(255)
+   id: bigint
+}
+class user_entity {
+   email: varchar(255)
+   password: varchar(255)
+   username: varchar(255)
+   id: bigint
+}
+class user_role {
+   role_id: bigint
+   user_id: bigint
+}
+
+address          -[#595959,plain]-^  city            : "city_id:id"
+address          -[#595959,plain]-^  street_type     : "street_type_id:id"
+address          -[#595959,plain]-^  user_entity     : "user_id:id"
+birth            -[#595959,plain]-^  city            : "city_id:id"
+birth            -[#595959,plain]-^  user_entity     : "user_id:id"
+city             -[#595959,plain]-^  country         : "country_id:id"
+fee              -[#595959,plain]-^  user_entity     : "user_id:id"
+membership       -[#595959,plain]-^  membership_type : "type_id:id"
+membership       -[#595959,plain]-^  user_entity     : "user_id:id"
+paid             -[#595959,plain]-^  user_entity     : "user_id:id"
+person_name      -[#595959,plain]-^  user_entity     : "user_id:id"
+user_role        -[#595959,plain]-^  role            : "role_id:id"
+user_role        -[#595959,plain]-^  user_entity     : "user_id:id"
+@enduml
