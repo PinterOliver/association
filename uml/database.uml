@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.DATABASE:association</OriginalElement>
+  <nodes>
+    <node x="341.47499999999997" y="-116.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity</node>
+    <node x="-123.02500000000009" y="121.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.membership</node>
+    <node x="60.974999999999966" y="99.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.person_name</node>
+    <node x="-127.0" y="-83.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.membership_type</node>
+    <node x="611.9749999999999" y="77.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.address</node>
+    <node x="876.9749999999999" y="-83.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.role</node>
+    <node x="425.9749999999999" y="132.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.fee</node>
+    <node x="884.9749999999999" y="154.5">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_role</node>
+    <node x="257.97499999999997" y="132.0">a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.paid</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_role" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="-27.0" y="-38.0" />
+      <point x="911.9749999999999" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.fee" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="0.0" y="-60.5" />
+      <point x="508.9749999999999" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.membership" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.membership_type" relationship="REFERENCES">
+      <point x="-41.0" y="-71.5" />
+      <point x="-82.02500000000009" y="52.0" />
+      <point x="-49.0" y="52.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_role" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.role" relationship="REFERENCES">
+      <point x="27.0" y="-38.0" />
+      <point x="965.9749999999999" y="52.0" />
+      <point x="943.9749999999999" y="52.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.paid" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="0.0" y="-60.5" />
+      <point x="331.97499999999997" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.person_name" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="0.0" y="-93.5" />
+      <point x="149.47499999999997" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.address" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="0.0" y="-115.5" />
+      <point x="738.4749999999999" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+    <edge source="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.membership" target="a63c4bcd-b61c-4319-80c8-c91ef7a1c9b9.TABLE:association.public.user_entity" relationship="REFERENCES">
+      <point x="41.0" y="-71.5" />
+      <point x="-0.02500000000009095" y="52.0" />
+      <point x="420.4749999999999" y="52.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.935071243523316" showDependencies="false" x="458.4748051948052" y="154.98372294372297" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
